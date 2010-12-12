@@ -1,6 +1,3 @@
-# vi command line editing
-set -o vi
-
 # aliases
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -9,11 +6,11 @@ alias .....="cd ../../../../"
 alias ls='ls -lhF'
 alias la='ls -lahF'
 alias rm='rm -rf'
-alias ruby='ruby -Itest'
+alias mongodb='mongod run --config /usr/local/Cellar/mongodb/1.6.4-x86_64/mongod.conf'
 
 # prompt
 export CLICOLOR=yes
-export TERM=xterm-color
+export TERM=xterm-256color
 alias RED='tput setaf 1'
 alias YELLOW='tput setaf 3'
 alias RESET='tput sgr0'
@@ -24,9 +21,6 @@ function __rvm_ps1 {
   fi
 }
 export PS1='\[$(RED)\]$(__rvm_ps1)\[$(RESET)\]\w\[$(YELLOW)\]$(__git_ps1)\[$(RESET)\] $ '
-
-# variables
-export EDITOR=vi
 
 # git
 source ~/.git-completion.bash
@@ -41,3 +35,6 @@ hitch() {
   if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
 alias unhitch='hitch -u'
+
+# port
+PATH=$PATH:/opt/local/bin
