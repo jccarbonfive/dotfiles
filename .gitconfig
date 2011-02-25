@@ -1,21 +1,16 @@
 [alias]
-	st = status -sb
-	br = branch
-	ci = commit
-	last = log -1 HEAD
-	co = checkout
-	unstage = reset HEAD --
-	staged = diff --cached
-	df = diff
-	lol = log --graph
-  lola = log --graph --all
-	ls = ls-files
-[color]
-	ui = auto
+    st = status -sb
+    br = branch
+    ci = commit
+    co = checkout
+    lol = log --graph
+    lola = log --graph --all
+    today = log --author='Jared Carroll' --since=midnight
 [core]
-	excludesfiles = ~/.gitignore
-  editor = vi
+    editor = vim
 [format]
-  pretty = format:%Cgreen%h%Creset%C(yellow)%d%Creset %s %Cred%an %C(cyan)%ar%Creset
+    pretty = format:%Cgreen%h%Creset | %C(cyan)%ar%Creset | %s %C(yellow)%d %Cred[%an]
+[color]
+    ui = auto
 [color "status"]
-	untracked = yellow
+    untracked = yellow
