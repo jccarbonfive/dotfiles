@@ -6,8 +6,9 @@
     lol = log --graph
     lola = log --graph --all
     today = log --author='Jared Carroll' --since=midnight
+    yesterday = log --author='Jared Carroll' --since=yesterday
 [core]
-    editor = vim
+    editor = vi
     excludesfile = ~/.gitignore
 [apply]
     whitespace = error
@@ -16,7 +17,7 @@
 [rerere]
     enabled = true
 [format]
-    pretty = format:%Cgreen%h%Creset | %C(cyan)%ar%Creset | %s %C(yellow)%d %Cred[%an]
+    pretty = format:%C(yellow)%h%Creset | %C(cyan)%ar%Creset | %s %C(yellow)%d %Cred[%an]
 [color]
     ui = auto
 [color "status"]
