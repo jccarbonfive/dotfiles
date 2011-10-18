@@ -16,6 +16,8 @@
     renames = copy
 [rerere]
     enabled = true
+[merge]
+    summary = true
 [format]
     pretty = format:%C(yellow)%h%Creset | %C(cyan)%ar%Creset | %s %C(yellow)%d %Cred[%an]
 [color]
